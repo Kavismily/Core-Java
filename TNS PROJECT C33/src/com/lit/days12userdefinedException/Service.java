@@ -1,0 +1,35 @@
+package com.lit.days12userdefinedException;
+
+public class Service {
+	public static boolean validateMarks(int[]marks) throws InvalidMarksException {
+		for(int ele:marks) {
+			if(ele<0||ele>100) {
+				throw new InvalidMarksException("Marks should be between 0-100");
+				
+			}
+		}
+		
+		return true;
+		
+	}
+	
+	public static float calculatepercentage(int[]marks) {
+		int total = 0;
+		for( int value:marks)
+		{
+			total +=value;
+			
+		}
+		
+		float percentage = total/marks.length;
+		
+		
+		
+		return percentage;
+		
+		
+	}
+
+	
+
+}
